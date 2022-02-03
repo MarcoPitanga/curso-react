@@ -1,2 +1,2 @@
 # Projeto 1
-Projeto basico em React
+Lista de Post com imagem, titulo e descrição.
