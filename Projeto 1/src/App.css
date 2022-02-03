@@ -1,0 +1,40 @@
+body{
+  background-color: #101010;
+}
+
+.container {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #252525;
+  color: whitesmoke;
+  padding: 30px;
+}
+
+.posts{
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.post {
+  border-radius: 7px;
+  background: #101010;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  transition: transform 100ms ease-in-out;
+}
+
+.post:hover {
+  transform: scale(1.08);
+}
+
+.post img {
+  max-width: 90%;
+  
+}
+
+.post-content {
+  padding: 20px;
+}
