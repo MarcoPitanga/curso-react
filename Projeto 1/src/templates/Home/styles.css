@@ -1,0 +1,19 @@
+body{
+  background-color: #101010;
+}
+
+.container {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #252525;
+  color: whitesmoke;
+  padding: 30px;
+}
+
+.button-container{
+  min-height: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
