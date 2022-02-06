@@ -67,8 +67,8 @@ export const Home = () => {
         )}
         
       </div>
-      <div className='footer-container'>
-        <h4 className='footer'>Gays: Lucas Garcia, Stéferson Augusto e Alvaro krawlão</h4>
+      <div className='footer'>
+        <a className='creator'>Created By: Marco Pitanga</a><a className='friends'>Gays: Lucas Garcia, Stéferson Augusto and Alvaro krawlão</a>
       </div>
     </section>
   )
