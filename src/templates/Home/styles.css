@@ -25,3 +25,15 @@ body{
 .search-container h1{
   margin-bottom: 30px;
 }
+
+.footer-container {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  font-size: 10px;
+  color: #101010;
+}

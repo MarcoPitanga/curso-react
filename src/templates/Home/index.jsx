@@ -67,6 +67,9 @@ export const Home = () => {
         )}
         
       </div>
+      <div className='footer-container'>
+        <h4 className='footer'>Gays: Lucas Garcia, Stéferson Augusto e Alvaro krawlão</h4>
+      </div>
     </section>
   )
 }
