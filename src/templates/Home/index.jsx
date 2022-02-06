@@ -68,7 +68,7 @@ export const Home = () => {
         
       </div>
       <div className='footer'>
-        <a className='creator'>Created By: Marco Pitanga</a><a className='friends'>Gays: Lucas Garcia, Stéferson Augusto and Alvaro krawlão</a>
+        <p className='creator'>Created By: Marco Pitanga</p><p className='friends'>Gays: Lucas Garcia, Stéferson Augusto and Alvaro krawlão</p>
       </div>
     </section>
   )
