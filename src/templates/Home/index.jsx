@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { loadPosts } from '../../utils/load-posts'
 import { Posts } from '../../components/Posts'
 import { Button } from '../../components/Button'
-import { TextInput } from '../../components/Input'
+import { TextInput } from '../../components/TextInput'
 
 export const Home = () => {
   const [posts, setPosts] = useState([])
