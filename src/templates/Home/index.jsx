@@ -16,10 +16,12 @@ export const Home = () => {
 
   const noMorePosts = page + postsPerPage >= allPosts.length
 
-  const filteredPosts = !!searchValue ? allPosts.filter(post => {
-    return post.title.toUpperCase().includes(searchValue.toUpperCase())
-  }) : posts
-  
+  const filteredPosts = searchValue
+    ? allPosts.filter((post) => {
+        return post.title.toUpperCase().includes(searchValue.toUpperCase())
+      })
+    : posts
+
   const handleLoadPosts = useCallback(async (page, postsPerPage) => {
     const postsAndPhotos = await loadPosts()
     setPosts(postsAndPhotos.slice(page, postsPerPage))
@@ -41,34 +43,26 @@ export const Home = () => {
   }
 
   const handleChange = (e) => {
-    const {value} = e.target
+    const { value } = e.target
     setSearchValue(value)
   }
 
-
   return (
-    <section className='container'>
+    <section className="container">
+      <div className="search-container">
+        <TextInput searchValue={searchValue} handleChange={handleChange} />
 
-      <div className='search-container'>
-        
-        <TextInput searchValue={searchValue} handleChange = {handleChange}/>
-
-        {!!searchValue && (
-          <h1>search value: {searchValue}</h1>
-        )}
-
+        {!!searchValue && <h1>search value: {searchValue}</h1>}
       </div>
 
-      {!!filteredPosts.length > 0 ? <Posts posts={filteredPosts}/> : <p>Não existem posts</p>}
-      
-      <div className='button-container'>
-        {!searchValue && (
-          <Button disabled={ noMorePosts } text='Ver Mais' onClick={loadMorePosts}/>
-        )}
-        
+      {!!filteredPosts.length > 0 ? <Posts posts={filteredPosts} /> : <p>Não existem posts</p>}
+
+      <div className="button-container">
+        {!searchValue && <Button disabled={noMorePosts} text="Ver Mais" onClick={loadMorePosts} />}
       </div>
-      <div className='footer'>
-        <p className='creator'>Created By: Marco Pitanga</p><p className='friends'>Gays: Lucas Garcia, Stéferson Augusto and Alvaro krawlão</p>
+      <div className="footer">
+        <p className="creator">Created By: Marco Pitanga</p>
+        <p className="friends">Gays: Lucas Garcia, Stéferson Augusto and Alvaro krawlão</p>
       </div>
     </section>
   )
